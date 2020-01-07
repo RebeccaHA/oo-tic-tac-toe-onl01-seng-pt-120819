@@ -88,7 +88,7 @@ class TicTacToe
   end
   
   def over?
-    
+    draw? || won? 
   end
   
   
