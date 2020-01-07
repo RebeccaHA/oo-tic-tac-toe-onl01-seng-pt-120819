@@ -69,10 +69,12 @@ class TicTacToe
   
   def won?
     WIN_COMBINATIONS.find do |combination|
-     @board[combination[0]] == "X" &&  @board[combination[1]] == "X" && @board[combination[2]] == "X" || @board[combination[0]] == "O" &&  @board[combination[1]] == "O" && @board[combination[2]] == "O" 
+     if @board[combination[0]] == "X" &&  @board[combination[1]] == "X" && @board[combination[2]] == "X" || @board[combination[0]] == "O" &&  @board[combination[1]] == "O" && @board[combination[2]] == "O" 
         combination
-     end
-    
+     else
+       false
+      end
+    end
   end
   
   def full?
@@ -80,6 +82,8 @@ class TicTacToe
       slot == "X" || slot == "O"
     end
   end
+  
+  
   
   
 end
