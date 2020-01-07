@@ -98,6 +98,14 @@ class TicTacToe
   end
   
   def play
+    until won?
+      turn
+    if won?
+      winner
+    elsif draw?
+     puts "It is a draw"
+    end
+    end
   end 
   
   
