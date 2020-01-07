@@ -79,7 +79,7 @@ class TicTacToe
   
   def full?
     @board.all? do |slot|
-      slot == "X" || "O"
+      slot == "X" || slot == "O"
     end
   end
   
